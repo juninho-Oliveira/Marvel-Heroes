@@ -1,0 +1,54 @@
+.card{
+    position: relative;
+    flex-grow: 1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width: 25%;
+    max-width: 20vw;
+    height: 420px;
+    border-radius: 16px;
+    background-size: cover!important;
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 20px rgba(0,0,0,0.19);
+    width: 26%;
+    height: 425px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.card-content{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    padding-top: 5%!important;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.badge{
+    position: absolute;
+    right:-5%;
+    top: -4%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+@media (max-width: 700px) {
+    .card{
+        width: 50%;
+        height: 520px;
+        max-width: none;
+    }
+
+    .badge{
+        top: -2%;
+        right:-3%;
+    }
+}

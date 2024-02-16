@@ -1,0 +1,99 @@
+.App-filter {
+  width: 70%;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.App-filter .filter-description {
+  font-size: 14px;
+  font-weight: 600;
+  color: #B7B7C8;
+}
+
+.App-filter h2 {
+  font-size: 32px;
+  font-weight: bolder;
+  color: #313140;
+  margin-top: 10px;
+
+}
+
+
+
+.button-hero {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(11, 163, 96, 1) 0%, rgba(13, 184, 109, 1) 39%, rgba(7, 246, 141, 1) 100%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.button-hero:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: linear-gradient(180deg, rgb(15, 205, 123) 0%, rgb(79, 209, 153) 39%, rgba(7, 246, 141, 1) 100%);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.button-villain {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(237, 29, 36, 1) 0%, rgba(230, 32, 39, 1) 39%, rgba(228, 85, 90, 1) 100%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.button-villain:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: linear-gradient(180deg, rgb(231, 72, 77) 0%, rgb(227, 65, 70) 39%, rgba(228, 85, 90, 1) 100%);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.areaButton {
+  display: flex;
+  gap: 2%;
+  align-items: center;
+}
+
+.clear-filter{
+  background: #cfcfcf;
+  color: black;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.clear-filter:hover{
+  box-shadow: 0px -5px 17px 0px rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 70px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 4px;
+  background-color: #ff5b60;
+  color: #fff;
+  text-align: center;
+  top: -20px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.button-hero:hover .tooltiptext {
+  visibility: visible;
+}
+
+.button-villain:hover .tooltiptext {
+  visibility: visible;
+}

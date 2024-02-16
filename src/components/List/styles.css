@@ -1,0 +1,11 @@
+.item{
+    font-size: 15px;
+    color: white;
+    opacity: 0.75;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 5px!important;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    margin: 0;
+}

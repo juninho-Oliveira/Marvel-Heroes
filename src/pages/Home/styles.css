@@ -1,0 +1,18 @@
+
+.App-card {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding: 5%;
+  width: 70%;
+  margin: auto;
+  background-color: #fffcf6;
+}
+
+
+
+@media (max-width: 700px) {
+  
+}

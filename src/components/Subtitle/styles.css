@@ -1,0 +1,9 @@
+.subtitle{
+    font-size: 15px;
+    color: white;
+    opacity: 0.75;
+    font-weight: 100;
+    text-transform: capitalize;
+    margin-left: 5%!important;
+    margin: 0;
+}

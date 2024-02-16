@@ -1,0 +1,24 @@
+.App-header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    box-shadow: 0 3px 20px 0 rgba(0,0,0,0.2), 0 6px 20px 0px rgba(0,0,0,0.19);
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto!important;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+ 
+  
