@@ -1,50 +1,50 @@
-.card-back-area{
+.card-back-area {
     width: auto;
     position: absolute;
     left: 3%;
     top: 5%;
 }
 
-.card-back-area img{
+.card-back-area img {
     width: 30px;
 }
 
-.card-back-area img:hover{
+.card-back-area img:hover {
     width: 33px;
     transition: 0.4s;
     opacity: 0.9;
 }
 
-.subtitleDetails{
+.subtitleDetails {
     font-size: 25px;
     color: white;
     opacity: 0.75;
     font-weight: 100;
     text-transform: capitalize;
-    margin-left: 5%!important;
+    margin-left: 5% !important;
     margin: 0;
 }
 
-.titleHeroDetails{
+.titleHeroDetails {
     color: white;
     font-size: 35px;
     font-weight: bolder;
-    margin-left: 5%!important;
-    margin-bottom: 2%!important;
+    margin-left: 5% !important;
+    margin-bottom: 2% !important;
     margin: 0;
 }
 
-.card-hero{
+.card-hero {
     position: relative;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 50%;
     height: 600px;
     min-height: 600px;
     margin: auto;
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
-    background-size: cover!important;
-    background-position: center!important;
+    background-size: cover !important;
+    background-position: center !important;
 }
 
 /* .card-hero:hover{
@@ -55,7 +55,7 @@
     cursor: pointer;
 } */
 
-.card-hero-content{
+.card-hero-content {
     width: 100%;
     height: auto;
     min-height: 100%;
@@ -69,12 +69,12 @@
     align-items: baseline;
 }
 
-.card-title-area{
+.card-title-area {
     margin-top: 80%;
     width: 80%;
 }
 
-.card-title-details{
+.card-title-details {
     margin-top: 7%;
     width: 100%;
     display: flex;
@@ -82,19 +82,19 @@
     justify-content: space-evenly;
 }
 
-.card-title-details .group-detail{
+.card-title-details .group-detail {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.card-title-details .group-detail .details-icon{
+.card-title-details .group-detail .details-icon {
     width: 25px;
     opacity: 0.75;
 }
 
-.card-title-details .group-detail .details-text{
+.card-title-details .group-detail .details-text {
     font-size: 14px;
     margin-top: 10%;
     color: white;
@@ -104,11 +104,11 @@
     padding: 5% 5%;
 }
 
-.card-description .description-text{
+.card-description .description-text {
     color: white;
 }
 
-.card-hero-skills{
+.card-hero-skills {
     width: 100%;
     height: auto;
     /* background-color: rgba(0, 0, 0, 0.6); */
@@ -127,14 +127,14 @@
 }
 
 
-.skillsHeroDetails{
+.skillsHeroDetails {
     color: white;
     font-weight: bolder;
-    margin-bottom: 2%!important;
+    margin-bottom: 2% !important;
     margin: 0;
 }
 
-.group-skills{
+.group-skills {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -142,14 +142,25 @@
 }
 
 @media (max-width: 700px) {
-    .card-hero{
-        width: 50%;
-        height: 520px;
+    .card-hero {
+        width: 80%;
+        height: 720px;
         max-width: none;
     }
 
-    .badge{
+    .card-description {
+        padding-top: 15%;
+    }
+
+    .badge {
         top: -2%;
-        right:-3%;
+        right: -3%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .card-hero {
+        height: 800px;
+        min-height: 800px;
     }
 }
