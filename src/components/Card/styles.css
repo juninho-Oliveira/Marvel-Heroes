@@ -1,4 +1,4 @@
-.card{
+.cardHome{
     position: relative;
     flex-grow: 1;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -13,7 +13,7 @@
     background-size: cover!important;
 }
 
-.card:hover{
+.cardHome:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 20px rgba(0,0,0,0.19);
     width: 26%;
     height: 425px;
@@ -41,7 +41,7 @@
 }
 
 @media (max-width: 700px) {
-    .card{
+    .cardHome{
         width: 50%;
         height: 520px;
         max-width: none;

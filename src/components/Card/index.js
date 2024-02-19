@@ -18,7 +18,7 @@ const Card = ({ personagem }) => {
 
 
   return (
-    <div className="card" style={backgroundImage} onClick={onClickButton}>
+    <div className="cardHome" style={backgroundImage} onClick={onClickButton}>
       {/* <Title title={nome} /> */}
       {/* <Image src={imagem} alt={nome}/> */}
       <div className="card-content">

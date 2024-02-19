@@ -56,10 +56,36 @@
   cursor: pointer;
 }
 
+.button-add {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgb(29, 98, 237) 0%, rgb(57, 117, 236) 39%, rgb(91, 139, 236) 100%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.button-add:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: linear-gradient(180deg, rgb(56, 117, 240) 0%, rgb(92, 140, 235) 39%, rgb(131, 166, 236) 100%);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
 .areaButton {
   display: flex;
   gap: 2%;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.buttonGroup{
+  display: flex;
+  gap: 4%;
+  width: 60%;
 }
 
 .clear-filter{
@@ -96,4 +122,8 @@
 
 .button-villain:hover .tooltiptext {
   visibility: visible;
+}
+
+.icon-add{
+  width: 30px;
 }
