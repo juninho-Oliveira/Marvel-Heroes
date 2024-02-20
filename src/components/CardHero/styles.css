@@ -9,6 +9,14 @@
     width: 30px;
 }
 
+/*estilo do botão voltar */
+.card-back-area button {
+    border: none;
+    background-color: transparent;
+}
+/*------------------*/
+
+
 .card-back-area img:hover {
     width: 33px;
     transition: 0.4s;

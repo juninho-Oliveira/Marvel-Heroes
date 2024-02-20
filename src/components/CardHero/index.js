@@ -22,9 +22,10 @@ const CardHero = ({ personagem }) => {
       {/* <Image src={imagem} alt={nome}/> */}
       <div className="card-hero-content">
         <div className="card-back-area">
-          <a href="/ ">
+          <button onClick={() => navigate(-1)}>{/*JR: alteirei essa parte porque quando clicava no botão ele recaregava a página ao voltar*/}
             <img className="back" src={require('../../assets/icons/arrow.png')} />
-          </a>
+          </button>
+
         </div>
         <div className="card-title-area">
           <span className="subtitleDetails">{tipo}</span>
