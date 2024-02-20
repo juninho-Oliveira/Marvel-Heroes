@@ -1,5 +1,14 @@
 .detailsPage{
     padding: 5%;
 }
+.col-12 button {
+    margin: 5px;
+}
  
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
   

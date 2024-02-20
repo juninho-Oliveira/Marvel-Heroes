@@ -1,5 +1,7 @@
 // Override default variables before the import
-
+.col-12 {
+  padding: 5px
+}
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
