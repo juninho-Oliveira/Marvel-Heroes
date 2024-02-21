@@ -15,11 +15,16 @@ const FormPage = () => {
   const [raca, setRaca] = useState('');
   const [url, setUrl] = useState('');
   const [tipo, setTipo] = useState('');
-
   const [descricao, setDescricao] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Validação
+    if (!nome || !altura || !idade || !origem || !raca || !url || !tipo || !descricao) {
+      alert('Por favor, preencha todos os campos!');
+      return false;
+    }
 
     const personagem = {
       nome: nome,
@@ -32,6 +37,8 @@ const FormPage = () => {
       imagem: url
     }
     personagensData.push(personagem)
+
+    return navigate(-1)
   };
 
   const navigate = useNavigate()
@@ -84,8 +91,8 @@ const FormPage = () => {
 
 
           <div className="col-12">
-            <button type="submit" className="btn btn-primary" onClick={() => navigate(-1)}>Enviar</button>{/*JR: achei mais facíl colocar essa função porque ela retorna para a página de cards*/}
-            <button type="button" className="btn btn-primary"  onClick={() => navigate(-1)}>Voltar</button>
+            <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Enviar</button>{/*JR: achei mais facíl colocar essa função porque ela retorna para a página de cards*/}
+            <button type="button" className="btn btn-primary" onClick={() => navigate(-1)}>Voltar</button>
           </div>
         </form>
       </div>
