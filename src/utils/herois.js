@@ -1,5 +1,6 @@
 const personagensData = [
     {
+        id: 2,
         nome: "Homem de Ferro",
         tipo: "heroi",
         raca: "Humano",
