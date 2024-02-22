@@ -8,6 +8,16 @@
 .areaPoderes{
     width: 100%;
 }
+
+.input-button{
+    width: 100%;
+}
+
+@media (min-width: 1180px) {
+    .input-button {
+        width: 45%!important;
+    }
+}
  
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
