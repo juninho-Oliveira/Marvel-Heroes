@@ -24,6 +24,9 @@
 
 
 .botaExcluir {
+    position: absolute;
+    top: -2%;
+    right: -3%;
     display: flex;
     align-items: center;
     justify-content: center;

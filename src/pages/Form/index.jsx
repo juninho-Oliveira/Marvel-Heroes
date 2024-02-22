@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Header from "../../components/Header";
-import personagensData from '../../utils/herois';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -16,6 +15,9 @@ const FormPage = () => {
   const [url, setUrl] = useState('');
   const [tipo, setTipo] = useState('');
   const [descricao, setDescricao] = useState('');
+
+  const localStorageData = JSON.parse(localStorage.getItem("personagens"));
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -36,7 +38,8 @@ const FormPage = () => {
       altura: altura,
       imagem: url
     }
-    personagensData.push(personagem)
+    localStorageData.push(personagem);
+    localStorage.setItem("personagens", JSON.stringify(localStorageData))
 
     return navigate(-1)
   };

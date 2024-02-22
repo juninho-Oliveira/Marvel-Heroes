@@ -20,7 +20,6 @@ const Card = ({ personagem, funcaoDoPai }) => {
 
 
   return (
-    <div className="container-cards">
 
       <div className="cardHome" style={backgroundImage} onClick={onClickButton}>
         <div className="card-content">
@@ -28,8 +27,7 @@ const Card = ({ personagem, funcaoDoPai }) => {
           <Title title={nome} />
         </div>
       </div>
-      <button className='botaExcluir' onClick={funcaoDoPai}>X</button>
-    </div>
+      // <button className='botaExcluir' onClick={() => funcaoDoPai(nome)}>X</button>
   );
 };
 

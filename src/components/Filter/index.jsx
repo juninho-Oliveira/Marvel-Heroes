@@ -4,10 +4,11 @@ import { useNavigate } from 'react-router-dom';
 
 const Filter = ({ onIncrement, personagens }) => {
   const navigate = useNavigate();
+  const localStorageData = JSON.parse(localStorage.getItem("personagens"));
 
   function checkSize() {
     //console.log(personagens);
-    return (personagens.length === personagensData.length);
+    return (personagens.length === localStorageData.length);
   }
 
   const onClickButton = () => {
