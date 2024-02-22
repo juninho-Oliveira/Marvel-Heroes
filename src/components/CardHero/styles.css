@@ -1,5 +1,9 @@
 .card-back-area {
-    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 94%;
+    height: 35px;
     position: absolute;
     left: 3%;
     top: 5%;
@@ -8,6 +12,39 @@
 .card-back-area img {
     width: 30px;
 }
+
+/*estilo do botão voltar */
+.card-back-area .botaoCard {
+    border: none;
+    background-color: transparent;
+}
+/*------------------*/
+
+/*Estilo do botão excluir */
+
+
+.botaExcluir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(237, 29, 36, 1) 0%, rgba(230, 32, 39, 1) 39%, rgba(228, 85, 90, 1) 100%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+.botaExcluir:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(180deg, rgb(231, 72, 77) 0%, rgb(227, 65, 70) 39%, rgba(228, 85, 90, 1) 100%);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/*-----------------------*/
+
 
 .card-back-area img:hover {
     width: 33px;

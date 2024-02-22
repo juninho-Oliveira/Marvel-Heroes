@@ -40,6 +40,50 @@
     border-radius: 100%;
 }
 
+
+.button-close {
+    display: flex;
+    position: absolute;
+    top: -4%;
+    right: -6%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(237, 29, 36, 1) 0%, rgba(230, 32, 39, 1) 39%, rgba(228, 85, 90, 1) 100%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .button-close:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(180deg, rgb(231, 72, 77) 0%, rgb(227, 65, 70) 39%, rgba(228, 85, 90, 1) 100%);
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+.x-shape {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: -2px;
+  }
+  
+  .x-shape:before, .x-shape:after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+  }
+  
+  .x-shape:before {
+    transform: rotate(45deg);
+  }
+  
+  .x-shape:after {
+    transform: rotate(-45deg);
+  }
+
 @media (max-width: 700px) {
     .cardHome{
         width: 50%;

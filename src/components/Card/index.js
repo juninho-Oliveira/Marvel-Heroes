@@ -13,8 +13,10 @@ const Card = ({ personagem }) => {
   }
 
   const onClickButton = () => {
-    navigate('/details', {state: {personagem: personagem}})
+    navigate('/details', { state: { personagem: personagem } })
   }
+
+  
 
 
   return (
