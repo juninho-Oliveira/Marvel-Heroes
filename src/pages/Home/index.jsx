@@ -10,18 +10,25 @@ import Filter from "../../components/Filter";
 
 const HomePage = () => {
   const [personagens, setPersonagem] = useState(personagensData);
+  const [novosPersonagens, setNovosPersonagens] = useState(personagensData);
+
+  const excluirPersonagem = (nome) => {
+    const novos = personagens.filter(personagem => personagem.nome !== nome);
+    setNovosPersonagens(novos);
+    setPersonagem(novos);
+    alert(`Personagem ${nome} excluído!`);
+    console.log(novos)
+  }
 
   function filterPersonagem(tipo) {
     let data;
     if (tipo !== '') {
-      data = personagensData.filter((item) => item.tipo === tipo);
+      data = novosPersonagens.filter((item) => item.tipo === tipo);
       setPersonagem(data);
-    }else{
-      setPersonagem(personagensData);
-
+    } else {
+      setPersonagem(novosPersonagens);
     }
   }
-
 
   return (
     <section>
@@ -32,6 +39,7 @@ const HomePage = () => {
           <Card
             key={personagem.nome}
             personagem={personagem}
+            funcaoDoPai={() => excluirPersonagem(personagem.nome)}
           />
         )}
       </div>
