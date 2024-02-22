@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Header from "../../components/Header";
 import personagensData from '../../utils/herois';
@@ -11,8 +11,8 @@ const FormPage = () => {
   const [nome, setNome] = useState('');
   const [altura, setAltura] = useState('');
   const [idade, setIdade] = useState('');
-  const [origem, setOrigem] = useState('');
   const [raca, setRaca] = useState('');
+  const [poderes, setPoderes] = useState([]);
   const [url, setUrl] = useState('');
   const [tipo, setTipo] = useState('');
   const [descricao, setDescricao] = useState('');
@@ -21,7 +21,7 @@ const FormPage = () => {
     event.preventDefault();
 
     // Validação
-    if (!nome || !altura || !idade || !origem || !raca || !url || !tipo || !descricao) {
+    if (!nome || !altura || !idade || !poderes || !raca || !url || !tipo || !descricao) {
       alert('Por favor, preencha todos os campos!');
       return false;
     }
@@ -30,7 +30,7 @@ const FormPage = () => {
       nome: nome,
       tipo: tipo,
       raca: raca,
-      poderes: [origem],
+      poderes: poderes,
       historia: descricao,
       idade: idade,
       altura: altura,
@@ -40,6 +40,21 @@ const FormPage = () => {
 
     return navigate(-1)
   };
+
+  useEffect(() => {
+    console.log(poderes)
+  }, [poderes])
+
+  const addSkills = () => {
+    const inputOrigem = document.getElementById('inputOrigem');
+    const poder = inputOrigem.value;
+    if (poder) {
+      inputOrigem.value = null;
+      setPoderes((poderes)=>[...poderes, poder]);
+    } else {
+      alert('Nenhuma habilidade informada!')
+    }
+  }
 
   const navigate = useNavigate()
 
@@ -61,10 +76,29 @@ const FormPage = () => {
             <label htmlFor="inputIdade" className="form-label">Idade</label>
             <input type="number" className="form-control" id="inputIdade" value={idade} onChange={e => setIdade(e.target.value)} />
           </div>
-          <div className="col-12">
-            <label htmlFor="inputOrigem" className="form-label">Poderes</label>
-            <input type="text" className="form-control" id="inputOrigem" value={origem} onChange={e => setOrigem(e.target.value)} placeholder='Ex: Magia, Intelecto Genial, Tecnologia Avançada' />
+          <div className="areaPoderes" >
+            <div className='col-6'>
+              <label htmlFor="inputOrigem" className="form-label">Poderes</label>
+              <div className="col-6 input-group" style={{ marginTop: '0' }}>
+                <input type="text" className="form-control" id="inputOrigem" placeholder='Ex: Magia, Intelecto Genial, Tecnologia Avançada' />
+                <div className="input-group-btn">
+                  <button type="button" className="btn btn-primary" onClick={addSkills}>Salvar</button>{/*JR: achei mais facíl colocar essa função porque ela retorna para a página de cards*/}
+                </div>
+              </div>
+              {(poderes.length > 0)?
+                <div className="col-8 pt-2">
+                  {poderes.map((poder) =>
+                    <p key={poder}>- {poder}</p>
+                  )}
+                </div>
+                :null
+              }
+              
+            </div>
+
           </div>
+
+
           <div className="col-md-6">
             <label htmlFor="inputRaça" className="form-label">Raça</label>
             <input type="text" className="form-control" id="inputRaça" value={raca} onChange={e => setRaca(e.target.value)} placeholder='Ex: Humano' />
