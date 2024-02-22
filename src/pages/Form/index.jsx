@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Header from "../../components/Header";
-import personagensData from '../../utils/herois';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -16,6 +15,9 @@ const FormPage = () => {
   const [url, setUrl] = useState('');
   const [tipo, setTipo] = useState('');
   const [descricao, setDescricao] = useState('');
+
+  const localStorageData = JSON.parse(localStorage.getItem("personagens"));
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -36,7 +38,8 @@ const FormPage = () => {
       altura: altura,
       imagem: url
     }
-    personagensData.push(personagem)
+    localStorageData.push(personagem);
+    localStorage.setItem("personagens", JSON.stringify(localStorageData))
 
     return navigate(-1)
   };
@@ -77,9 +80,8 @@ const FormPage = () => {
             <input type="number" className="form-control" id="inputIdade" value={idade} onChange={e => setIdade(e.target.value)} />
           </div>
           <div className="areaPoderes" >
-            <div className='col-6'>
               <label htmlFor="inputOrigem" className="form-label">Poderes</label>
-              <div className="col-6 input-group" style={{ marginTop: '0' }}>
+              <div className="col-6 input-group input-button" style={{ marginTop: '0' }}>
                 <input type="text" className="form-control" id="inputOrigem" placeholder='Ex: Magia, Intelecto Genial, Tecnologia Avançada' />
                 <div className="input-group-btn">
                   <button type="button" className="btn btn-primary" onClick={addSkills}>Salvar</button>{/*JR: achei mais facíl colocar essa função porque ela retorna para a página de cards*/}
@@ -94,7 +96,6 @@ const FormPage = () => {
                 :null
               }
               
-            </div>
 
           </div>
 

@@ -2,10 +2,10 @@
 .App-card {
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 5%;
   padding: 5%;
+  gap: 20px;
   width: 70%;
   margin: auto;
   background-color: #fffcf6;

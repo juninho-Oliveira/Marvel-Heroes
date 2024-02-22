@@ -2,9 +2,11 @@ import './styles.css';
 import List from "../List";
 import { useNavigate } from "react-router-dom";
 
-const CardHero = ({ personagem }) => {
+const CardHero = ({ personagem}) => {
+
   const navigate = useNavigate();
   const { nome, imagem, tipo, altura, idade, raca, historia, poderes} = personagem;
+  const  localStorageData = JSON.parse(localStorage.getItem("personagens"));
 
   const backgroundImage = {
     background: `url(${imagem})  no-repeat`,
@@ -14,27 +16,24 @@ const CardHero = ({ personagem }) => {
     navigate('/details', { state: { personagem: personagem } })
   }
 
-  const botaoExcluir = () => {
-    /*//e.stopPropagation();
-    removerPersonagem(personagem.id);
-    navigate(-1);*/
-
-    alert(personagem.nome)
+  const excluirPersonagem = () => {
+    const localStorageNewData = localStorageData.filter(personagem => personagem.nome !== nome);
+    //setPersonagem(localStorageNewData);
+    localStorage.setItem("personagens", JSON.stringify(localStorageNewData));
+    alert(`Personagem ${nome} excluído!`);
+    navigate(-1)
   }
 
-
   return (
-    <div className="card-hero" style={backgroundImage} onClick={onClickButton}>
+    <div className="card-hero" style={backgroundImage} >
       {/* <Title title={nome} /> */}
       {/* <Image src={imagem} alt={nome}/> */}
       <div className="card-hero-content">
+        <button className='botaExcluir' onClick={() => excluirPersonagem()}>X</button>
         <div className="card-back-area">
           <button className='botaoCard' onClick={() => navigate(-1)}>{/*JR: alteirei essa parte porque quando clicava no botão ele recaregava a página ao voltar*/}
             <img className="back" src={require('../../assets/icons/arrow.png')} />
           </button>
-
-          <button className='botaExcluir' onClick={botaoExcluir}>X</button>
-
         </div>
         <div className="card-title-area">
           <span className="subtitleDetails">{tipo}</span>
