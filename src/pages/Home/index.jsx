@@ -25,6 +25,20 @@ const HomePage = () => {
   //   alert(`Personagem ${nome} excluído!`);
   // }
 
+  const handleSearch = (data) => {
+    search(data);
+  }
+
+  function search(param) {
+    let data;
+    if (param !== '') {
+      data = personagensData.filter((item) => item.nome.toUpperCase() === param.toUpperCase());
+      setPersonagem(data);
+    } else {
+      setPersonagem(personagensData);
+    }
+  }
+
   function filterPersonagem(tipo) {
     if (tipo !== '') {
       setFiltroState((filtro)=> true);
@@ -47,7 +61,7 @@ const HomePage = () => {
 
   return (
     <section>
-      <Header />
+      <Header onHanderSearch={(data) => handleSearch(data)} />
       <Filter onIncrement={(tipo) => filterPersonagem(tipo)} personagens={personagens} />
       <div className="App-card">
         {personagens.map((personagem) =>
