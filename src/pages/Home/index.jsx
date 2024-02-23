@@ -30,12 +30,13 @@ const HomePage = () => {
   }
 
   function search(param) {
-    let data;
     if (param !== '') {
-      data = personagensData.filter((item) => item.nome.toUpperCase() === param.toUpperCase());
-      setPersonagem(data);
+      setFiltroState((filtro)=> true);
+      setPersonagem((personagens)=>[...localStorageData]);
+      setPersonagem((personagens)=>[...personagens.filter((item) =>item.nome.includes(param))]);
     } else {
-      setPersonagem(personagensData);
+      setFiltroState((filtro)=> false);
+      setPersonagem(personagens);
     }
   }
 
