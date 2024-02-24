@@ -19,7 +19,12 @@ O Marvel Heroes é uma aplicação em React que coloca o vasto universo dos her�
 * ![React](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
 * ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-## 👷 Autor
+## 👷 Autores
 - <a href='https://github.com/dalanmarinho'>Dalan Marinho</a>
+- <a href='https://github.com/juninho-Oliveira'>Junior</a>
+- <a href='https://github.com/AndersonS7'>Anderson Queiroz da Silva</a>
+
+- <a href='https://marvel-heroes-inky.vercel.app/'>Deploy no Vercel</a>
+
 
 
